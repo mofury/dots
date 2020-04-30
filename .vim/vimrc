@@ -1,0 +1,55 @@
+" Appearance
+set number relativenumber   " Show linenumbers
+syntax on                   " Syntax highlighting
+filetype plugin indent on   " Automatoc indentation
+set laststatus=2            " Show status bar
+set noshowmode              " Don't show vims standard mode indicator
+set colorcolumn=80          " Mark the 80th column
+let base16colorspace=256    " Use 256 colorspace
+silent! colorscheme base16-monokai  " Ignore errors while setting colorscheme
+
+" Macros
+" Map jk to Esc
+inoremap jk <ESC>
+" Map leader to q
+let mapleader = "q"
+" Move to next <++>
+inoremap <Leader>; <ESC>/<++><CR>3xs
+" Delete trailing whitespace
+inoremap <Leader>x <C-o>:<C-U>call StripTrailingWhitespace()<CR>
+"Compile document
+nnoremap <Leader>mk :w<CR>:make<CR><CR>
+" Move to next/previous entry of the quickfix list
+nnoremap <C-j> :cn<CR>
+nnoremap <C-k> :cp<CR>
+" Edit vimrc
+nnoremap <Leader>mv :w<CR>:edit ~/.vim/vimrc<CR>
+" Edit ftplugin
+nnoremap <Leader>mf :w<CR>:edit ~/.vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
+
+" General behaviour
+set tabstop=4       " Width of tabstop
+set softtabstop=0
+set expandtab       " Spaces over tabs
+set shiftwidth=4    " Size of an indentation
+set smarttab        " Use 'smart' tabs
+
+set ignorecase      " Make search case-insensitive
+set hlsearch        " Highlight results
+set incsearch       " Preview results
+
+set encoding=utf8
+
+" Plugins
+call plug#begin('~/.config/vim/plugged')
+    " Base16 colors
+    Plug 'chriskempson/base16-vim'
+    " A light status bar
+    Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" Base16 setup
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif

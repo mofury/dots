@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/usr/src'
+let g:netrw_dirhist_2='/usr'
+let g:netrw_dirhist_3='/'
+let g:netrw_dirhist_4='/home/moritz/Documents/python'
+let g:netrw_dirhist_5='/home/moritz/Documents/python/TelBot'
+let g:netrw_dirhist_6='/home/moritz/Documents/schule'
+let g:netrw_dirhist_7='/home/moritz/Documents/schule/abitur'
+let g:netrw_dirhist_8='/home/moritz/Documents/schule/abitur/gliederung'
+let g:netrw_dirhist_9='/home/moritz/Downloads/libxcb-1.14/man'
