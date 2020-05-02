@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ANSWER=$(echo -e "Herunterfahren\nNeu starten\nAbbruch" | rofi -dmenu -i -p "Den PC ")
+case $ANSWER in
+    "Herunterfahren")   shutdown now ;;
+    "Neu starten")      shutdown -r now;;
+    "Abbruch")          echo "mission abort";;
+esac
