@@ -1,0 +1,12 @@
+# ls macros
+alias ls="exa --icons"
+alias la="exa -a --icons"
+alias ll="exa -la --icons"
+alias ld="exa -TD --icons"
+alias tree="exa -T --icons"
+
+# being polite
+alias please="sudo"
+
+# git alias for dotfiles repo
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
