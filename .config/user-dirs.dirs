@@ -1,0 +1,3 @@
+XDG_DOWNLOAD_DIR="$HOME/downloads"
+XDG_TEMPLATES_DIR="$HOME/templates"
+XDG_DOCUMENTS_DIR="$HOME/documents"
