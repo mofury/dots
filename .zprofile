@@ -5,11 +5,12 @@
 # some defaults
 export LANG=en_US.utf8
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=qutebrowser
 export TERMINAL=st
 
-# add ~/bin and ~/.cargo/bin to $PATH
-PATH="$HOME/bin:$PATH"
+# if ~/.local/bin exists add it to $PATH
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+# add ~/.cargo/bin to $PATH
 PATH="$HOME/.cargo/bin:$PATH"
 export PATH
 

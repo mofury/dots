@@ -2,9 +2,9 @@
 super + Return
 	$TERMINAL
 super + d
-	rofi -show run -theme base16-default-dark
+	rofi -show run
 super + w
-    rofi -show window -theme base16-default-dark
+    rofi -show window
 super + b
     $BROWSER
 
@@ -19,7 +19,11 @@ super + shift + r
 
 # quit bspwm
 super + alt + q
-	bspc quit
+	prompt "BSPWM schliessen?" "bspc quit"
+
+# shutdown menu
+super + shift + x
+    shutdown_menu
 
 
 # close or kill

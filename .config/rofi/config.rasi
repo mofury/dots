@@ -1,0 +1,11 @@
+configuration {
+    theme:  "base16-default-dark";
+    font:   "monospace 20";
+    hide-scrollbar: true;
+    width: 38;
+    lines: 10;
+    columns: 2;
+    window-format:  "Desktop {w}: {t}";
+    max-history-size: 20;
+    sidebar-mode: true;
+}
