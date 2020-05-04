@@ -7,5 +7,4 @@ configuration {
     columns: 2;
     window-format:  "Desktop {w}: {t}";
     max-history-size: 20;
-    sidebar-mode: true;
 }
