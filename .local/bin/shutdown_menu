@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ANSWER=$(echo -e "Herunterfahren\nNeu starten\nAbbruch" | rofi -dmenu -i -p "Den PC ")
+ANSWER=$(echo -e "Herunterfahren\nNeu Starten\nAbbrechen" | rofi -dmenu -i -p "Startmenu")
 case $ANSWER in
     "Herunterfahren")   shutdown now ;;
     "Neu starten")      shutdown -r now;;
