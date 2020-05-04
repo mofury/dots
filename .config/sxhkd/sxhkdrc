@@ -7,6 +7,8 @@ super + w
     rofi -show window
 super + b
     $BROWSER
+super + shift + w
+    wallpaper
 
 
 # make sxhkd reload its configuration files:
@@ -16,6 +18,14 @@ super + Escape
 # reload bspwm config
 super + shift + r
     $HOME/.config/bspwm/bspwmrc
+
+# hide / show polybar clock
+super + a
+    pkill polybar || polybar clock ; $HOME/.config/bspwm/bspwmrc
+
+# hide/show polybar
+super + r
+    pkill polybar || polybar full ; $HOME/.config/bspwm/bspwmrc
 
 # quit bspwm
 super + alt + q
