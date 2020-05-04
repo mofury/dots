@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Load aliases
-source ~/.config/aliasesrc
+source ~/.config/aliasrc
 
 # Vi mode
 set -o vi
@@ -23,7 +23,7 @@ case "$(whoami)" in
 esac
 PS1+="\[\033[38;5;15m\]:\[$(tput sgr0)\]"
 PS1+="\[\033[38;5;12m\]\W\[$(tput sgr0)\]"
-PS1+="\[\033[38;5;15m\]] \[$(tput sgr0)\]"
+PS1+="\[\033[38;5;15m\]]$ \[$(tput sgr0)\]"
 export PS1
 
 
