@@ -5,7 +5,7 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="%B[%{$fg[green]%}%n%{$reset_color%}%B:%{$fg[blue]%}%~%{$reset_color%}%B]%%%b "
+PS1="[%{$fg[green]%}%n%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}]%% "
 
 # History in cache directory:
 HISTSIZE=10000
