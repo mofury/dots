@@ -12,6 +12,7 @@ export TERMINAL=st
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 # add ~/.cargo/bin to $PATH
 PATH="$HOME/.cargo/bin:$PATH"
+PATH="/snap/bin:$PATH"
 export PATH
 
 # if logging in in tty start x
