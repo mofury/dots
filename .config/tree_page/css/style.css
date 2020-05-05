@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "monospace";
+}
+
+:root {
+    --font: "monospace";
+    --background: #181818;
+    --foreground: #d8d8d8;
+    --green: #a1b56c;
+    --blue: #7cafc2;
+    --orange: #dc9656;
+    --aqua: #86c1b9;
+    --branch: 2px solid #d8d8d8;
+}
+
+html {
+    font-size: 24;
+}
+
+body {
+    background: var(--background);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.prompt {
+    font-family: var(--font);
+    color: var(--foreground);
+}
+
+.prompt~.prompt {
+    padding: 1.5rem 0 0.3125rem;
+}
+
+.gr {
+    color: var(--green);
+}
+
+.bl {
+    color: var(--blue);
+}
+
+h1 {
+    display: inline;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--blue);
+}
+
+.tree > ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+li::before, li::after {
+    content: "";
+    position: absolute;
+    left: -0.75rem;
+}
+
+li::before {
+    border-top: var(--branch);
+    top: 0.75rem;
+    width: 1.5rem;
+}
+
+li::after {
+    border-left: var(--branch);
+    height: 100%;
+    top: 0.25rem;
+}
+
+li:last-child::after {
+    height: 0.5rem;
+}
+
+a {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--aqua);
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: var(--orange);
+}
+
+form h1 {
+    color: var(--aqua);
+    padding-left: 0.125rem;
+}
+
+input {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--foreground);
+    background-color: var(--background);
+    border: none;
+}

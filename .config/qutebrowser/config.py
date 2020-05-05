@@ -1189,7 +1189,7 @@ c.url.auto_search = 'naive'
 ## Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 ## for a blank page.
 ## Type: FuzzyUrl
-c.url.default_page = 'https://www.qwant.com/?r=DE&sr=de&l=en_gb&h=1&s=1&a=1&b=1&vt=1&hc=0&smartNews=1&smartSocial=0&theme=1&i=1'
+c.url.default_page = '~/.config/tree_page/index.html'
 
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
@@ -1214,7 +1214,7 @@ c.url.searchengines = {'DEFAULT': 'https://www.qwant.com/?q={}&t=web', 'yt': 'ht
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://www.qwant.com/?r=DE&sr=de&l=en_gb&h=1&s=1&a=1&b=1&vt=1&hc=0&smartNews=1&smartSocial=0&theme=1&i=1']
+c.url.start_pages = ['~/.config/tree_page/index.html']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
