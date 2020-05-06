@@ -3,20 +3,24 @@
 # Remove all rules when refreshing
 bspc rule -r "*"
 
-# Use DP monitor as main
+# Use DP monitor as main and HDMI as second
 mainmonitor="$(bspc query --monitors --names | grep DP | head -n 1)"
+secondmonitor="$(bspc query --monitors --names | grep HDMI | head -n 1)"
 
-# Set up workspaces on main monitor
-bspc monitor $mainmonitor -d 1 2 3 4 5 6 7 8 9 10
+# Set up workspaces
+# bspc monitor $mainmonitor -d    隸
+# bspc monitor $mainmonitor -d  ﳘ ﯬ 
+# bspc monitor $mainmonitor -d    阮
+bspc monitor $mainmonitor -d I II III IV
+
+# If HDMI is connected, set up workspaces on second monitor
+# [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 冷 露
+[ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d V VI
 bspc desktop -f 1
 
 # Set border and gaps
 bspc config border_width 10
 bspc config window_gap 10
-bspc config top_padding 0
-bspc config bottom_padding 0
-bspc config left_padding 0
-bspc config right_padding 0
 
 # Remove gaps in monocle mode
 bspc config gapless_monocle false
@@ -33,6 +37,3 @@ bspc config focus_follows_pointer false
 bspc config click_to_focus any
 bspc config swallow_first_click true
 bspc config pointer_follows_monitor true
-
-# Spawn new windows to the left (?)
-bspc config initial_polarity second_child
