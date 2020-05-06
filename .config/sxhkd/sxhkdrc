@@ -21,11 +21,11 @@ super + shift + r
 
 # hide / show polybar clock
 super + a
-    pkill polybar || polybar clock ; $HOME/.config/bspwm/bspwmrc
+    pkill polybar || polybar small
 
 # hide/show polybar
 super + r
-    pkill polybar || polybar full ; $HOME/.config/bspwm/bspwmrc
+    pkill polybar || polybar full
 
 # quit bspwm
 super + alt + q
