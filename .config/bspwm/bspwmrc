@@ -16,7 +16,6 @@ bspc monitor $mainmonitor -d I II III IV
 # If HDMI is connected, set up workspaces on second monitor
 # [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 冷 露
 [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d V VI
-bspc desktop -f 1
 
 # Set border and gaps
 bspc config border_width 10
@@ -37,3 +36,14 @@ bspc config focus_follows_pointer false
 bspc config click_to_focus any
 bspc config swallow_first_click true
 bspc config pointer_follows_monitor true
+
+# Scratchpad terminal
+bspc rule -a dropdown sticky=on state=floating hidden=on
+st -c dropdown -e zsh &
+
+# Window rules
+bspc rule -a "Brave-browser" desktop='^3'
+
+# If it isn't running, open spotify on ws 4
+[ -z "$(ps -A | grep spotify)" ] && bspc desktop -f ^4 && spotify
+bspc desktop -f ^1

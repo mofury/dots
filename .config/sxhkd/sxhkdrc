@@ -1,15 +1,27 @@
-# Open windows
-super + Return
+# open scratchpad
+super + g
+    scratchpad dropdown
+# open Terminal
+super + shift + Return
 	$TERMINAL
+# application launcher
 super + d
 	rofi -show run
+# window switcher
 super + w
     rofi -show window
+# open browser
 super + b
     $BROWSER
+# open alt browser
+super + shift + b
+    $BROWSER_ALT
+# change wallpaper
 super + shift + w
     wallpaper
-
+# show keybinding help
+super + shift + g
+    helper
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -21,11 +33,11 @@ super + shift + r
 
 # hide / show polybar clock
 super + a
-    pkill polybar || polybar small
+    pkill polybar && polybar small
 
 # hide/show polybar
 super + r
-    pkill polybar || polybar full
+    pkill polybar && polybar full
 
 # quit bspwm
 super + alt + q
@@ -45,7 +57,7 @@ super + {_,shift + } f
     bspc {desktop -l next,node - ~fullscreen}
 
 # swap the current node and the biggest local node
-super + g
+super + Return
 	bspc node -s biggest.local || bspc node -s next.local
 
 # set the window state
