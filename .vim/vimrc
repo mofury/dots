@@ -22,6 +22,8 @@ nnoremap <Leader>mk :w<CR>:make<CR><CR>
 " Move to next/previous entry of the quickfix list
 nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
+" Pastemode
+set pastetoggle=<F2>
 " Edit vimrc
 nnoremap <Leader>mv :w<CR>:edit ~/.vim/vimrc<CR>
 " Edit ftplugin
