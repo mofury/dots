@@ -6,6 +6,7 @@
 export LANG=en_US.utf8
 export EDITOR=vim
 export BROWSER=qutebrowser
+export BROWSER_ALT=brave-browser-stable
 export TERMINAL=st
 
 # if ~/.local/bin exists add it to $PATH
