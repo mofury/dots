@@ -10,3 +10,9 @@ alias please="sudo"
 
 # git alias for dotfiles repo
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# config files
+alias bsrc="vim ~/.config/bspwm/bspwmrc"
+alias sxrc="vim ~/.config/sxhkd/sxhkdrc"
+alias porc="vim ~/.config/polybar/config.ini"
+alias vrc="vim ~/.vim/vimrc"
