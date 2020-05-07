@@ -1,8 +1,10 @@
 #!/bin/bash
 
-ANSWER=$(echo -e "Herunterfahren\nNeu Starten\nAbbrechen" | rofi -dmenu -i -p "Startmenu")
+ANSWER=$(echo -e "Bildschirm Sperren\nAbmelden\nHerunterfahren\nNeu Starten\nAbbrechen" | rofi -dmenu -i -p "Startmenu")
 case $ANSWER in
+    "Bildschirm Sperren")   slock ;;
+    "Abmelden")         bspc quit && pkill -KILL -u moritz1 ;;
     "Herunterfahren")   shutdown now ;;
-    "Neu starten")      shutdown -r now;;
+    "Neu Starten")      shutdown -r now;;
     "Abbruch")          echo "mission abort";;
 esac
