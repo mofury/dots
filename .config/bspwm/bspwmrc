@@ -39,7 +39,11 @@ bspc config pointer_follows_monitor true
 
 # Scratchpad terminal
 bspc rule -a dropdown sticky=on state=floating hidden=on
-st -c dropdown -e zsh &
+st -c dropdown -t "Scratchpad Terminal" -g 120x36 -e zsh &
+
+# spt Spotify client as scratchpad
+bspc rule -a spotify sticky=on state=floating hidden=on
+st -c spotify -t "Spotify Client" -g 120x36 -e spt &
 
 # Window rules
 bspc rule -a "Brave-browser" desktop='^3'
