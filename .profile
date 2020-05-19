@@ -1,8 +1,11 @@
 # some defaults
-export LANG=en_us.UTF8
+export LANG=de_DE.UTF8
 export EDITOR=vim
 export BROWSER=firefox
 export TERM=st
+
+# load german keymap
+loadkeys de
 
 # add ~/bin to $PATH
 export PATH="$HOME/bin:$PATH"
