@@ -9,7 +9,7 @@ alias tree="exa -T --icons"
 alias please="sudo"
 
 # git alias for dotfiles repo
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # config files
 alias bsrc="vim ~/.config/bspwm/bspwmrc"
