@@ -592,7 +592,7 @@
 ## Directory to save downloads to. If unset, a sensible OS-specific
 ## default is used.
 ## Type: Directory
-c.downloads.location.directory = "~/downloads"
+c.downloads.location.directory = "~/donts"
 
 ## Prompt the user for the download location. If set to false,
 ## `downloads.location.directory` will be used.
