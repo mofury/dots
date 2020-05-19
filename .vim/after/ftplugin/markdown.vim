@@ -13,19 +13,3 @@ endif
 nnoremap <Leader>c :!pandoc % --filter pandoc-citeproc --bibliography="/home/moritz/documents/uni/uni.bib" -o pdf%:r.pdf<CR>
 " Open compiled pdf in zathura
 nnoremap <Leader>p :!zathura %:r.pdf &<CR><CR>
-
-" Umlaute
-inoremap ae ä
-inoremap AE Ä
-inoremap oe ö
-inoremap OE Ö
-inoremap ue ü
-inoremap UE Ü
-
-" Ausnahmen
-inoremap que que
-inoremap Que Que
-inoremap eue eue
-inoremap Eue Eue
-inoremap aue aue
-inoremap Aue Aue

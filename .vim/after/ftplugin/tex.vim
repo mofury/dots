@@ -13,14 +13,6 @@ endif
 " Open output with zathura
 nnoremap <Leader>p :!zathura %:r.pdf &<CR><CR>
 
-" Umlaute
-inoremap ae ä
-inoremap AE Ä
-inoremap oe ö
-inoremap OE Ö
-inoremap ue ü
-inoremap UE Ü
-
 " Macros
 " Sections and subsections
 inoremap <Leader>se \section{<++>}<CR>\label{sec:<++>}<CR><++>
