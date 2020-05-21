@@ -1,7 +1,7 @@
 # some defaults
 export LANG=de_DE.UTF8
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=qutebrowser
 export TERM=st
 
 # load german keymap
