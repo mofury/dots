@@ -10,12 +10,11 @@ secondmonitor="$(bspc query --monitors --names | grep HDMI | head -n 1)"
 # Set up workspaces
 # bspc monitor $mainmonitor -d    隸
 # bspc monitor $mainmonitor -d  ﳘ ﯬ 
-# bspc monitor $mainmonitor -d    阮
-bspc monitor $mainmonitor -d I II III IV
+bspc monitor $mainmonitor -d 1 2 3 4
 
 # If HDMI is connected, set up workspaces on second monitor
 # [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 冷 露
-[ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d V VI
+[ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 5 6
 
 # Set border and gaps
 bspc config border_width 10
@@ -47,7 +46,3 @@ st -c spotify -t "Spotify Client" -g 120x36 -e zsh &
 
 # Window rules
 bspc rule -a "Brave-browser" desktop='^3'
-
-# If it isn't running, open spotify on ws 4
-[ -z "$(ps -A | grep spotify)" ] && bspc desktop -f ^4 && spotify
-bspc desktop -f ^1

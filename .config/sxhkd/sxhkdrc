@@ -1,42 +1,57 @@
+# Open windows
+
 # open scratchpad
 super + g
     scratchpad dropdown
+
 # open spotify control
 super + shift + s
     scratchpad spotify ; [ -z "$(ps -A | grep spotifyd)" ] && spotifyd
+
 # open Terminal
 super + m
 	$TERMINAL
+
 # application launcher
 super + d
 	rofi -show run
+
 # window switcher
 super + w
     rofi -show window
+
 # open browser
 super + u
     $BROWSER
+
 # open alt browser
 super + shift + u
     $BROWSER_ALT
+
 # change wallpaper
 super + shift + w
     wallpaper
+
 # show keybinding help
 super + shift + g
     helper
 
-# Media
+
+# Media keys
 # mute audio
 XF86AudioMute
     amixer sset IEC958 toggle
+
 # next/previos track
 XF86Audio{Next,Prev}
     playerctl {next,previous}
+
 # play/pause
 XF86Audio{Pause,Play}
     playerctl play-pause
 
+
+# Reload configs
 # make sxhkd reload its configuration files:
 super + e
 	pkill -USR1 -x sxhkd
@@ -45,14 +60,16 @@ super + e
 super + shift + r
     $HOME/.config/bspwm/bspwmrc
 
-# hide / show polybar clock
+# hide / show small polybar
 super + a
     pkill polybar && polybar small
 
-# hide/show polybar
+# hide/show full polybar
 super + r
     pkill polybar && polybar full
 
+
+# Quit things
 # quit bspwm
 super + alt + q
 	prompt "BSPWM schliessen?" "bspc quit"
@@ -66,13 +83,10 @@ super + shift + x
     shutdown_menu
 
 
+# Manage windows
 # close or kill
 super + {_,shift + }q
 	bspc node -{c,k}
-
-# alternate between tiles and monocle layout
-super + {_,shift + } f
-    bspc {desktop -l next,node - ~fullscreen}
 
 # swap the current node and the biggest local node
 super + Return
@@ -82,31 +96,27 @@ super + Return
 super + {t,shift + t,s}
 	bspc node -t {tiled,pseudo_tiled,floating}
 
-# set the node flags
-super + ctrl + {x,y,z}
-	bspc node -g {locked,sticky,private}
+# alternate between tiles and monocle layout
+super + {_,shift + } f
+    bspc {desktop -l next,node - ~fullscreen}
 
 
-# focus/swap
+# Focus/Swap
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local
 
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -114,34 +124,20 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# preselect
-#
-
+# Preselect
 # preselect the direction
 super + alt + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
-super + alt + {1-9}
-	bspc node -o 0.{1-9}
-
 # cancel the preselection for the focused node
-super + ctrl + space
+super + alt + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + alt + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
-
+# Move/Resize
 # expand a window by moving one of its side outward
 super + ctrl + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
