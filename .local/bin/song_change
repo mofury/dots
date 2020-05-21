@@ -1,0 +1,5 @@
+#!/bin/bash
+
+playerctl status
+playerctl metadata title > ~/.cache/song_title.txt
+playerctl metadata artist > ~/.cache/song_artist.txt
