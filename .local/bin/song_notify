@@ -1,0 +1,3 @@
+#!/bin/sh
+
+notify-send "$(cat ~/.cache/song_artist.txt) - $(cat ~/.cache/song_title.txt)"

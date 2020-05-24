@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-playerctl status
-playerctl metadata title > ~/.cache/song_title.txt
+[ "$(playerctl status)" = "Playing" ] && \
+playerctl metadata title > ~/.cache/song_title.txt && \
 playerctl metadata artist > ~/.cache/song_artist.txt
+
+song_notify

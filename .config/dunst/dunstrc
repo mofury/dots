@@ -1,0 +1,78 @@
+[global]
+monitor = 0
+follow = keyboard
+geometry = "1200-1120-10"
+indicate_hidden = yes
+shrink = no
+transparency = 0
+notification_height = 30
+separator_height = 2
+padding = 5
+horizontal_padding = 5
+frame_width = 0
+frame_color = "#d8d8d8"
+separator_color = frame
+sort = yes
+idle_threshold = 120
+font = monospace 18
+line_height = 0
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = center
+show_age_threshold = 30
+word_wrap = yes
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = true
+show_indicators = yes
+#icon_position = right
+#min_icon_size = 0
+#max_icon_size = 32     
+#icon_path = /path/to/icon
+sticky_history = yes
+history_length = 20
+dmenu = rofi -dmenu -p dunst:
+browser = $BROWSER
+always_run_script = true
+title = Dunst
+class = Dunst
+startup_notification = false
+verbosity = mesg 
+corner_radius = 6
+force_xinerama = false
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+per_monitor_dpi = false
+
+[shortcuts]
+# Close notification
+close = ctrl+space
+
+# Close all notifications
+close_all = ctrl+shift+space
+
+# Redisplay last message(s)                                       
+history = ctrl+comma
+
+# Context menu
+context = ctrl+shift+period
+
+[urgency_low]
+background = "#282828"
+foreground = "#a1b56c"
+frame_color = "#a1b56c"
+timeout = 5
+
+[urgency_normal]
+background = "#282828"
+foreground = "#d8d8d8"
+frame_color = "#d8d8d8"
+timeout = 5
+
+[urgency_critical]
+background = "#282828"
+foreground = "#ab4642"
+frame_color = "#ab4642"
+timeout = 10
