@@ -1,3 +1,7 @@
+#     _____ __ / /  / /_____/ /_______
+#  _ (_-<\ \ // _ \/  '_/ _  / __/ __/
+# (_)___/_\_\/_//_/_/\_\\_,_/_/  \__/ 
+                                    
 # Open windows
 
 # open scratchpad
@@ -21,11 +25,11 @@ super + w
     rofi -show window
 
 # open browser
-super + u
+super + semicolon
     $BROWSER
 
 # open alt browser
-super + shift + u
+super + shift + semicolon
     $BROWSER_ALT
 
 # change wallpaper
@@ -102,39 +106,42 @@ super + {t,shift + t,s}
 
 # toggle fullscreen and remove padding
 super + f
-    bspc desktop -l next && \
-    bspc config left_padding 0 && \
-    bspc config right_padding 0
-
-# toggle fullscreen and move window to center
-super + shift + f
-    bspc desktop -l next && \
+    bspc desktop -l monocle && \
     bspc config left_padding 700 && \
     bspc config right_padding 700
 
+# toggle fullscreen and move window to center
+super + shift + f
+    bspc desktop -l tiled && \
+    bspc config left_padding 0 && \
+    bspc config right_padding 0
+
 
 # Focus/Swap
+# emulating dwm
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{y,u,i,o}
 	bspc node -{f,s} {west,south,north,east}
 
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local
+# focus the older or newer node in the focus history
+super + {j,k}
+    bspc node -f {next,prev}.local
+
+# resize pseudo-master/stack
+super + {h,l}
+	bspc node -z {left -40 0,left 40 0}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super + shift + {j,k}
 	bspc desktop -f {prev,next}.local
 
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# focus the last used desktop/monitor
+super + {_,shift + }Tab
+    bspc {desktop,monitor} -f last
 
 # Preselect
 # preselect the direction

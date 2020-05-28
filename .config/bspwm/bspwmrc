@@ -1,5 +1,11 @@
 #! /bin/sh
 
+#      __                               
+#     / /  ___ ___ _    ____ _  ________
+#  _ / _ \(_-</ _ \ |/|/ /  ' \/ __/ __/
+# (_)_.__/___/ .__/__,__/_/_/_/_/  \__/ 
+#           /_/                         
+
 # Remove all rules when refreshing
 bspc rule -r "*"
 
@@ -15,6 +21,9 @@ bspc monitor $mainmonitor -d 1 2 3 4
 # If HDMI is connected, set up workspaces on second monitor
 # [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 冷 露
 [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 5 6
+
+# Open new windows on the right
+bspc config initial_polarity second_child
 
 # Set border and gaps
 bspc config border_width 10
