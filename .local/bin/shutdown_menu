@@ -4,7 +4,7 @@ ANSWER=$(echo -e "Bildschirm aufnehmen\nBildschirm Sperren\nAbmelden\nHerunterfa
 case $ANSWER in
     "Bildschirm aufnehmen") screen ;;
     "Bildschirm Sperren")   slock ;;
-    "Abmelden")         bspc quit && pkill -KILL -u moritz1 ;;
+    "Abmelden")         bspc quit && pkill -KILL -u $(whoami);;
     "Herunterfahren")   shutdown now ;;
     "Neu Starten")      shutdown -r now;;
     "Abbruch")          echo "mission abort";;
