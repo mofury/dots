@@ -3,7 +3,7 @@
 #
 
 # some defaults
-export LANG=en_US.utf8
+export LANG=de_DE.utf8
 export EDITOR=vim
 export BROWSER=qutebrowser
 export BROWSER_ALT=brave-browser-stable
@@ -12,7 +12,7 @@ export TERMINAL=st
 # if ~/.local/bin exists add it to $PATH
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 # add ~/.cargo/bin to $PATH
-PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.local/share/cargo/bin:$PATH"
 PATH="/snap/bin:$PATH"
 export PATH
 

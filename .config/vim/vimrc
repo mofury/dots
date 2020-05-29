@@ -6,11 +6,17 @@ set laststatus=2            " Show status bar
 set noshowmode              " Don't show vims standard mode indicator
 set colorcolumn=80          " Mark the 80th column
 let base16colorspace=256    " Use 256 colorspace
-silent! colorscheme base16-monokai  " Ignore errors while setting colorscheme
+silent! colorscheme base16-default-dark  " Ignore errors while setting colorscheme
+
+" XDG compliance
+set undodir=$XDG_DATA_HOME/vim/undo
+set directory=$XDG_DATA_HOME/vim/swap
+set backupdir=$XDG_DATA_HOME/vim/backup
+set viewdir=$XDG_DATA_HOME/vim/view
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 
 " Macros
-" Map jk to Esc
-inoremap jk <ESC>
 " Map leader to q
 let mapleader = "q"
 " Move to next <++>
@@ -51,7 +57,7 @@ call plug#begin('~/.config/vim/plugged')
 call plug#end()
 
 " Base16 setup
-if filereadable(expand("~/.vimrc_background"))
+if filereadable(expand("~/.vim/vimrc_background"))
   let base16colorspace=256
-  source ~/.vimrc_background
+  source ~/.vim/vimrc_background
 endif
