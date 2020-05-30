@@ -31,9 +31,9 @@ nnoremap <C-k> :cp<CR>
 " Pastemode
 set pastetoggle=<F2>
 " Edit vimrc
-nnoremap <Leader>mv :w<CR>:edit ~/.vim/vimrc<CR>
+nnoremap <Leader>mv :w<CR>:edit $XDG_CONFIG_DIR/vim/vimrc<CR>
 " Edit ftplugin
-nnoremap <Leader>mf :w<CR>:edit ~/.vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
+nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_DIR/vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
 
 " General behaviour
 set tabstop=4       " Width of tabstop
@@ -54,6 +54,8 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'chriskempson/base16-vim'
     " A light status bar
     Plug 'itchyny/lightline.vim'
+    " Sxhkdrc syntax
+    Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
 " Base16 setup

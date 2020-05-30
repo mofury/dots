@@ -1,11 +1,11 @@
 [global]
 monitor = 0
 follow = keyboard
-geometry = "1200-1120-10"
+geometry = "1200x1-1120-10"
 indicate_hidden = yes
 shrink = no
 transparency = 0
-notification_height = 30
+notification_height = 1
 separator_height = 2
 padding = 5
 horizontal_padding = 5
@@ -31,7 +31,7 @@ show_indicators = yes
 #max_icon_size = 32     
 #icon_path = /path/to/icon
 sticky_history = yes
-history_length = 20
+history_length = 1
 dmenu = rofi -dmenu -p dunst:
 browser = $BROWSER
 always_run_script = true

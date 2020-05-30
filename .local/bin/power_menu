@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ANSWER=$(echo -e "Abbrechen\nBildschirm aufnehmen\nAbmelden\nHerunterfahren\nNeu Starten" | rofi -dmenu -i -p "Startmenu")
+case $ANSWER in
+    "Abbrechen")            echo "mission abort";;
+    "Bildschirm aufnehmen") screen ;;
+    "Abmelden")             bspc quit && pkill -KILL -u $(whoami);;
+    "Herunterfahren")       shutdown now ;;
+    "Neu Starten")          shutdown -r now;;
+esac

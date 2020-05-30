@@ -55,3 +55,4 @@ st -c spotify -t "Spotify Client" -g 120x36 -e zsh &
 
 # Window rules
 bspc rule -a "Brave-browser" desktop='^3'
+bspc rule -a "Zathura" state=tiled
