@@ -143,3 +143,11 @@ super + e
 # alternative browser
 super + shift + e
     $BROWSER_ALT
+
+# inkscape
+super + a
+    inkscape
+
+# zathura
+super + y
+    zathura
