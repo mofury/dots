@@ -5,6 +5,12 @@ alias ll="exa -la --icons"
 alias ld="exa -TD --icons"
 alias tree="exa -T --icons"
 
+# color
+alias grep="grep --color=auto"
+alias ip="ip -color=auto"
+alias make="colormake"
+alias ping="prettyping"
+
 # being polite
 alias please="sudo"
 
