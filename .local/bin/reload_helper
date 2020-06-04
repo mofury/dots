@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 answer=$(echo "bspwm\ndunst\nbar" | rofi -dmenu -p "Neu laden")
 
