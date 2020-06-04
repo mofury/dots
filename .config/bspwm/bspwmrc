@@ -16,13 +16,14 @@ secondmonitor="$(bspc query --monitors --names | grep HDMI | head -n 1)"
 # Set up workspaces
 # bspc monitor $mainmonitor -d    隸
 # bspc monitor $mainmonitor -d  ﳘ ﯬ 
-bspc monitor $mainmonitor -d 1 2 3 4
+bspc monitor "%$mainmonitor" -d 1 2 3 4
 
 # If HDMI is connected, set up workspaces on second monitor
 # [ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 冷 露
-[ ! -z $secondmonitor ] && bspc monitor $secondmonitor -d 5 6
+[ ! -z $secondmonitor ] && bspc monitor "%$secondmonitor" -d 5 6
 
 # Open new windows on the right
+bspc config automatic_scheme spiral
 bspc config initial_polarity second_child
 
 # Set border and gaps
