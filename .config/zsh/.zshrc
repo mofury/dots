@@ -64,6 +64,9 @@ man() {
     command man "$@"
 }
 
+# command not found handler
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
