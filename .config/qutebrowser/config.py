@@ -681,7 +681,7 @@ c.fonts.messages.warning = '15pt monospace'
 ## Default monospace fonts. Whenever "monospace" is used in a font
 ## setting, it's replaced with the fonts listed here.
 ## Type: Font
-c.fonts.monospace = 'monospace, "FiraCode Nerd Font Mono", "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", Fixed, Consolas, Terminal'
+# c.fonts.monospace = '"FiraCode Nerd Font Mono", "xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", Fixed, Consolas, Terminal'
 
 ## Font used for prompts.
 ## Type: Font
@@ -921,7 +921,7 @@ c.prompt.filebrowser = True
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers.
 ## Type: Bool
-c.qt.force_software_rendering = True
+c.qt.force_software_rendering = 'chromium'
 
 ## Turn on Qt HighDPI scaling. This is equivalent to setting
 ## QT_AUTO_SCREEN_SCALE_FACTOR=1 in the environment. It's off by default
@@ -1227,7 +1227,7 @@ c.url.start_pages = ['~/.config/tree_page/index.html']
 ## Format to use for the window title. The same placeholders like for
 ## `tabs.title.format` are defined.
 ## Type: FormatString
-c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
+c.window.title_format = '{perc}{title_sep}qutebrowser'
 
 ## Default zoom level.
 ## Type: Perc
