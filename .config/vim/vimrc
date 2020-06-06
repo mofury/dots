@@ -36,15 +36,16 @@ nnoremap <Leader>mv :w<CR>:edit $XDG_CONFIG_DIR/vim/vimrc<CR>
 nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_DIR/vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
 
 " General behaviour
-set tabstop=4       " Width of tabstop
+set clipboard=unnamedplus   " Sets system clipboard to + register
+set tabstop=4               " Width of tabstop
 set softtabstop=0
-set expandtab       " Spaces over tabs
-set shiftwidth=4    " Size of an indentation
-set smarttab        " Use 'smart' tabs
+set expandtab               " Spaces over tabs
+set shiftwidth=4            " Size of an indentation
+set smarttab                " Use 'smart' tabs
 
-set ignorecase      " Make search case-insensitive
-set hlsearch        " Highlight results
-set incsearch       " Preview results
+set ignorecase              " Make search case-insensitive
+set hlsearch                " Highlight results
+set incsearch               " Preview results
 
 set encoding=utf8
 
