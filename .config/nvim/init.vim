@@ -1,20 +1,12 @@
 " Appearance
-set number relativenumber   " Show linenumbers
-syntax on                   " Syntax highlighting
-filetype plugin indent on   " Automatoc indentation
-set laststatus=2            " Show status bar
-set noshowmode              " Don't show vims standard mode indicator
-set colorcolumn=80          " Mark the 80th column
-let base16colorspace=256    " Use 256 colorspace
-silent! colorscheme base16-default-dark  " Ignore errors while setting colorscheme
-
-" XDG compliance
-set undodir=$XDG_DATA_HOME/vim/undo
-set directory=$XDG_DATA_HOME/vim/swap
-set backupdir=$XDG_DATA_HOME/vim/backup
-set viewdir=$XDG_DATA_HOME/vim/view
-set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+set number relativenumber           " Show linenumbers
+syntax on                           " Syntax highlighting
+filetype plugin indent on           " Automatoc indentation
+set laststatus=2                    " Show status bar
+set noshowmode                      " Don't show vims standard mode indicator
+set colorcolumn=80                  " Mark the 80th column
+let base16colorspace=256            " Use 256 colorspace
+colorscheme base16-default-dark     " Set colorscheme
 
 " Macros
 " Map leader to q
@@ -36,7 +28,10 @@ nnoremap <Leader>mv :w<CR>:edit $XDG_CONFIG_DIR/vim/vimrc<CR>
 nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_DIR/vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
 
 " General behaviour
-set clipboard=unnamedplus   " Sets system clipboard to + register
+set clipboard=unnamedplus   " Sets system clipboard to "+ register
+
+set wildmenu                " :find behaviour
+
 set tabstop=4               " Width of tabstop
 set softtabstop=0
 set expandtab               " Spaces over tabs
@@ -50,7 +45,7 @@ set incsearch               " Preview results
 set encoding=utf8
 
 " Plugins
-call plug#begin('~/.config/vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
     " Base16 colors
     Plug 'chriskempson/base16-vim'
     " A light status bar
@@ -62,5 +57,5 @@ call plug#end()
 " Base16 setup
 if filereadable(expand("~/.vim/vimrc_background"))
   let base16colorspace=256
-  source ~/.vim/vimrc_background
+  source ~/.config/nvim/vimrc_background
 endif
