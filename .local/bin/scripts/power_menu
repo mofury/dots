@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/dash
 
-ANSWER=$(echo -e "Abbrechen\nBildschirm aufnehmen\nAbmelden\nHerunterfahren\nNeu Starten" | rofi -dmenu -i -p "Startmenu")
+ANSWER=$(echo "Abbrechen\nBildschirm aufnehmen\nAbmelden\nHerunterfahren\nNeu Starten" | rofi -dmenu -i -p "Startmenu")
 case $ANSWER in
     "Abbrechen")            echo "mission abort";;
     "Bildschirm aufnehmen") screen ;;

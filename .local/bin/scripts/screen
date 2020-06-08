@@ -1,3 +1,3 @@
-#! /bin/bash
+#! /bin/dash
 
 scrot '%Y-%m-%d_%H-%M.png' -e 'mv $f ~/pics/screenshots/' -z -d $(rofi -dmenu -p "Verzögerung")

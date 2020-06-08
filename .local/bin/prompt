@@ -1,3 +1,0 @@
-#!/bin/bash
-
-[ $(echo -e "Nein\nJa" | rofi -dmenu -i -p "$1") == "Ja" ] && $2

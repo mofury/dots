@@ -1,0 +1,6 @@
+#!/bin/dash
+
+wp=$(sxiv -r /media/storage/bilder/Wallpaper -o)
+
+cp $wp ~/.config/wallpaper
+source ~/.fehbg
