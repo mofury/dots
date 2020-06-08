@@ -17,8 +17,8 @@ alias please="sudo"
 # git alias for dotfiles repo
 alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
-# vim alias for xdg
-alias vim="vim -S $XDG_CONFIG_HOME/vim/vimrc"
+# neovim alias
+alias vim="nvim"
 
 # config files
 alias bsrc="vim ~/.config/bspwm/bspwmrc"
