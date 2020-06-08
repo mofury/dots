@@ -116,6 +116,10 @@ super + space
 super + shift + space
     rofi -show window
 
+# file browser
+super + shift + BackSpace
+    rofi -show file-browser
+
 # terminal
 super + BackSpace
     $TERMINAL
@@ -131,6 +135,10 @@ super + s
 # websearch
 super + d
     websearch
+
+# bookmarks
+super + shift + d
+    boosta
 
 # change wallpaper
 super + w

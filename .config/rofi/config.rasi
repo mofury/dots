@@ -7,4 +7,5 @@ configuration {
     columns: 2;
     window-format:  "Desktop {w}: {t}";
     max-history-size: 20;
+    modi: "window,run,file-browser";
 }
