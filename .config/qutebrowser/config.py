@@ -1210,7 +1210,7 @@ c.url.default_page = '~/.config/tree_page/index.html'
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.qwant.com/?q={}&t=web', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}'}
+c.url.searchengines = {'DEFAULT': 'https://www.qwant.com/?q={}&t=web', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl

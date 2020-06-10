@@ -1,12 +1,13 @@
 #!/bin/dash
 
-engine="$(echo 'wikipedia\narchwiki\nqwant\nqmkdoc\nsubreddit' | rofi -dmenu -p 'Suchen in')"
+engine="$(echo 'wikipedia\narchwiki\nqwant\nqmkdoc\nrustdoc\nsubreddit' | rofi -dmenu -p 'Suchen in')"
 [ ! -z $engine ] && query="$(rofi -dmenu -p 'Suchen nach')"
 
 case $engine in
-    'wikipedia')    qutebrowser https://en.wikipedia.org/wiki/"$query" & ;;
-    'archwiki')     qutebrowser https://wiki.archlinux.org/index.php\?search="$query"\&title=Special%3ASearch\&go=Go & ;;
-    'qwant')        qutebrowser https://www.qwant.com/\?q="$query"\&t=web & ;;
-    'qmkdoc')       qutebrowser https://docs.qmk.fm/\#/"$query" & ;;
-    'subreddit')    qutebrowser https://reddit.com/r/"$query" & ;;
+    'wikipedia')    $BROWSER https://en.wikipedia.org/wiki/"$query" & ;;
+    'archwiki')     $BROWSER https://wiki.archlinux.org/index.php\?search="$query"\&title=Special%3ASearch\&go=Go & ;;
+    'qwant')        $BROWSER https://www.qwant.com/\?q="$query"\&t=web & ;;
+    'qmkdoc')       $BROWSER https://docs.qmk.fm/\#/"$query" & ;;
+    'rustdoc')      $BROWSER https://doc.rust-lang.org/std/index.html?search=$query & ;;
+    'subreddit')    $BROWSER https://reddit.com/r/"$query" & ;;
 esac
