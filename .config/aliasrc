@@ -5,6 +5,9 @@ alias ll="exa -la --icons"
 alias ld="exa -TD --icons"
 alias tree="exa -T --icons"
 
+# vimlike shortcut to clear
+alias zt="clear"
+
 # color
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
