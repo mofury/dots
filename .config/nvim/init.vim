@@ -23,13 +23,11 @@ nnoremap <C-k> :cp<CR>
 " Pastemode
 set pastetoggle=<F2>
 " Edit vimrc
-nnoremap <Leader>mv :w<CR>:edit $XDG_CONFIG_DIR/vim/vimrc<CR>
+nnoremap <Leader>mv :w<CR>:edit $XDG_CONFIG_HOME/nvim/init.vim<CR>
 " Edit ftplugin
-nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_DIR/vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
+nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_HOME/nvim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
 
 " General behaviour
-set clipboard=unnamedplus   " Sets system clipboard to "+ register
-
 set wildmenu                " :find behaviour
 
 set tabstop=4               " Width of tabstop
@@ -55,7 +53,7 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " Base16 setup
-if filereadable(expand("~/.vim/vimrc_background"))
+if filereadable(expand("~/.config/nvim/vimrc_background"))
   let base16colorspace=256
   source ~/.config/nvim/vimrc_background
 endif
