@@ -4,7 +4,7 @@
 
 # some defaults
 export LANG=de_DE.utf8
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=qutebrowser
 export BROWSER_ALT=brave
 export TERMINAL=st
