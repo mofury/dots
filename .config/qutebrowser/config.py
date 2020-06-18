@@ -184,7 +184,7 @@ c.url.auto_search = 'naive'
 c.url.default_page = '~/.config/tree_page/index.html'
 
 ## Search engines which can be used via the address bar. Maps a search
-c.url.searchengines = {'DEFAULT': 'https://www.qwant.com/?q={}&t=web', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
+c.url.searchengines = {'DEFAULT': 'https://suche.uferwerk.org/?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
 
 ## Page(s) to open at the start.
 c.url.start_pages = ['~/.config/tree_page/index.html']
