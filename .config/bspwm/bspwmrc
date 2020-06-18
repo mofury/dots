@@ -51,7 +51,3 @@ bspc rule -a dropdown sticky=on state=floating hidden=on
 
 # spt Spotify client as scratchpad
 bspc rule -a spotify sticky=on state=floating hidden=on
-
-# Window rules
-bspc rule -a "Brave-browser" desktop='^3'
-bspc rule -a "Zathura" state=tiled
