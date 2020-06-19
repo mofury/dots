@@ -18,13 +18,13 @@ alias ping="prettyping"
 alias please="sudo"
 
 # git alias for dotfiles repo
-alias dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dots="git --git-dir=$HOME/.dots.git/ --work-tree=$HOME"
 
 # neovim alias
-alias vim="nvim"
+alias v="nvim"
 
 # config files
 alias bsrc="vim ~/.config/bspwm/bspwmrc"
 alias sxrc="vim ~/.config/sxhkd/sxhkdrc"
 alias porc="vim ~/.config/polybar/config.ini"
-alias vrc="vim ~/.config/vim/vimrc"
+alias vrc="vim ~/.config/nvim/init.vim"
