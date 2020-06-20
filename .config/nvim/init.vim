@@ -12,7 +12,7 @@ colorscheme base16-default-dark     " Set colorscheme
 " Map leader to q
 let mapleader = "q"
 " Move to next <++>
-inoremap <Leader>; <ESC>/<++><CR>3xs
+inoremap <Leader>ö <ESC>/<++><CR>3xs
 " Delete trailing whitespace
 inoremap <Leader>x <C-o>:<C-U>call StripTrailingWhitespace()<CR>
 "Compile document
@@ -29,6 +29,7 @@ nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_HOME/nvim/after/ftplugin/<C-r>=&ft<C
 
 " General behaviour
 set wildmenu                " :find behaviour
+set hidden
 
 set tabstop=4               " Width of tabstop
 set softtabstop=0
@@ -50,7 +51,22 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim'
     " Sxhkdrc syntax
     Plug 'baskerville/vim-sxhkdrc'
+    " Display hex colors
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 call plug#end()
+
+" Hexokinase setup
+set termguicolors
+let g:Hexokinase_highlighters = [ 'virtual' ]
+let g:Hexokinase_optInPatterns = [
+            \ 'full_hex',
+            \ 'triple_hex',
+            \ 'rgb',
+            \ 'rgba',
+            \ 'hsl',
+            \ 'hsla',
+            \ 'colour_names'
+\ ]
 
 " Base16 setup
 if filereadable(expand("~/.config/nvim/vimrc_background"))
