@@ -12,8 +12,10 @@ export TERMINAL=st
 # if ~/.local/bin exists add it to $PATH
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.local/bin/scripts" ] && PATH="$HOME/.local/bin/scripts:$PATH"
-# add ~/.cargo/bin to $PATH
+# add cargo to $PATH
 PATH="$HOME/.local/share/cargo/bin:$PATH"
+# add go to $PATh
+PATH="$HOME/go/bin:$PATH"
 export PATH
 
 # if logging in in tty start x
