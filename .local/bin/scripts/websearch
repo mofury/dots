@@ -1,6 +1,6 @@
 #!/bin/dash
 
-engine="$(echo 'searx\nwikipedia\narchwiki\nqmkdoc\nrustdoc\nsubreddit' | rofi -dmenu -p 'Suchen in')"
+engine="$(echo 'searx\nwikipedia\narchwiki\nqmkdoc\ngodoc\nrustdoc\nsubreddit' | rofi -dmenu -p 'Suchen in')"
 [ ! -z $engine ] && query="$(rofi -dmenu -p 'Suchen nach')"
 
 case $engine in
@@ -8,6 +8,8 @@ case $engine in
     'wikipedia')    $BROWSER https://en.wikipedia.org/wiki/"$query" & ;;
     'archwiki')     $BROWSER https://wiki.archlinux.org/index.php\?search="$query"\&title=Special%3ASearch\&go=Go & ;;
     'qmkdoc')       $BROWSER https://docs.qmk.fm/\#/"$query" & ;;
+    'godoc')        $BROWSER https://golang.org/search?q="$query" & ;;
     'rustdoc')      $BROWSER https://doc.rust-lang.org/std/index.html?search=$query & ;;
     'subreddit')    $BROWSER https://reddit.com/r/"$query" & ;;
+    *)              $BROWSER https://suche.uferwerk.org/?q="$engine" & ;;
 esac
