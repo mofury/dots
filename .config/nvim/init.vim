@@ -30,6 +30,7 @@ nnoremap <Leader>mf :w<CR>:edit $XDG_CONFIG_HOME/nvim/after/ftplugin/<C-r>=&ft<C
 " General behaviour
 set wildmenu                " :find behaviour
 set hidden
+set autowrite               " write before every make
 
 set tabstop=4               " Width of tabstop
 set softtabstop=0
@@ -41,6 +42,7 @@ set ignorecase              " Make search case-insensitive
 set hlsearch                " Highlight results
 set incsearch               " Preview results
 
+set tags=./tags             " Look for tagfile
 set encoding=utf8
 
 " Plugins
