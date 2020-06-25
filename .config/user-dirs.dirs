@@ -7,7 +7,7 @@
 # 
 XDG_DOCUMENTS_DIR="$HOME/dokumente"
 XDG_DOWNLOAD_DIR="$HOME/"
-XDG_TEMPLATES_DIR="$HOME/vorlagen"
+XDG_TEMPLATES_DIR="$HOME/dokumente/vorlagen"
 XDG_PUBLICSHARE_DIR="/media/storage"
 XDG_DESKTOP_DIR="$HOME/"
 XDG_PICTURES_DIR="/media/storage/bilder"
