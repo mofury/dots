@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 [ "$(playerctl status)" = "Playing" ] && \
 playerctl metadata title > ~/.cache/song_title.txt && \

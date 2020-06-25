@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 wp=$(sxiv -r /media/storage/bilder/Wallpaper -o)
 

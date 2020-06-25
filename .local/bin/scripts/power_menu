@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 ANSWER=$(echo "Abbrechen\nBildschirm aufnehmen\nBildschirm sperren\nAbmelden\nHerunterfahren\nNeu Starten" | rofi -dmenu -i -p "Startmenu")
 case $ANSWER in

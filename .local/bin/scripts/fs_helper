@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 bspc desktop -l $1 ; \
     bspc config left_padding $2 && \

@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 answer=$(echo "bspwm\ndunst\nbar" | rofi -dmenu -p "Neu laden")
 

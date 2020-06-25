@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 engine="$(echo 'searx\nwikipedia\narchwiki\nqmkdoc\ngodoc\nrustdoc\nyoutube\nnetflix\nsubreddit' | rofi -dmenu -p 'Suchen in')"
 [ ! -z $engine ] && query="$(rofi -dmenu -p 'Suchen nach')"
