@@ -1,0 +1,46 @@
+" Use XDG-base-directories
+set undodir=$XDG_DATA_HOME/vim/undo
+set directory=$XDG_DATA_HOME/vim/swap
+set backupdir=$XDG_DATA_HOME/vim/backup
+set viewdir=$XDG_DATA_HOME/vim/view
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+
+" Behaviour
+set encoding=utf8
+set hidden autowrite
+set wildmenu
+
+set tabstop=4
+set expandtab smarttab
+set shiftwidth=4
+
+set ignorecase smartcase
+set hlsearch incsearch
+
+set clipboard=unnamedplus
+set tags=./tags
+
+" Global mappings
+let mapleader = "ö"
+nnoremap <Leader>v :w<CR>:edit $XDG_CONFIG_HOME/vim/vimrc<CR>
+nnoremap <Leader>f :w<CR>:edit $XDG_CONFIG_HOME/vim/after/ftplugin/<C-r>=&ft<CR>.vim<CR>
+
+nnoremap <Leader>m :make<CR>
+nnoremap <Leader>j :cn<CR>
+nnoremap <Leader>k :cp<CR>
+
+inoremap <Leader>ö <ESC>/<++><CR>3xs
+set pastetoggle=<Leader>p
+
+" Appearance
+set showcmd
+set showfulltag showmatch
+set laststatus=2
+set statusline=%f%h%q%r%m%=b%n
+
+set number relativenumber
+syntax on
+filetype plugin indent on
+set colorcolumn=80
+let base16colorspace=256
+colorscheme tomorrow-night
