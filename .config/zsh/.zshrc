@@ -4,8 +4,14 @@
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="[%{$fg[green]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%% "
+case $USER in
+    root)
+        PS1="[%{$fg[red]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%{$fg[red]%}%%%{$reset_color%} "
+        ;;
+    *)
+        PS1="[%{$fg[yellow]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%% "
+        ;;
+esac
 
 # History in cache directory:
 HISTSIZE=10000
