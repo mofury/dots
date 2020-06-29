@@ -24,6 +24,8 @@ alias dots="git --git-dir=$HOME/.dots.git/ --work-tree=$HOME"
 alias v="vim"
 
 # config files
+alias zrc="vim ~/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
+alias alrc="vim ~/.config/aliasrc && source ~/.config/aliasrc"
 alias bsrc="vim ~/.config/bspwm/bspwmrc"
 alias sxrc="vim ~/.config/sxhkd/sxhkdrc"
 alias porc="vim ~/.config/polybar/config.ini"
