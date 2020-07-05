@@ -1,6 +1,5 @@
 " Spellchecking
-setlocal spell
-set spelllang=de
+set spell spelllang=de_20
 
 " Compiling with :make
 setlocal errorformat=%f:%l:\ %m,%f:%l-%\\d%\\+:\ %m

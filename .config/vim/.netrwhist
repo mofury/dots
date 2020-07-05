@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/usr/lib/go/src/path/filepath'
+let g:netrw_dirhist_7='/home/moritz/.config/vim'
+let g:netrw_dirhist_6='/home/moritz/.local/bin/scripts'
+let g:netrw_dirhist_5='/home/moritz/go/src/togo'
+let g:netrw_dirhist_4='/home/moritz/go/src'
+let g:netrw_dirhist_3='/home/moritz/go/src/togo'
+let g:netrw_dirhist_2='/home/moritz/go/src/togo/.git'
+let g:netrw_dirhist_1='/home/moritz/go/src/togo'
