@@ -30,9 +30,7 @@ set ignorecase smartcase
 set hlsearch incsearch
 nnoremap <Leader>h :nohlsearch<CR>
 
-" tabs
-set tabstop=8
-set shiftwidth=8
+" indentation
 set autoindent
 
 " make
