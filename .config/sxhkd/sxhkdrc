@@ -23,6 +23,14 @@ super + {h,l}
 super + Return
     bspc node -s biggest.local || bspc node -s next.local
 
+# preselect
+super + ctrl + {h,l}
+    bspc node -p {west,east}
+
+# make all windows equally big
+super + ctrl + {j,k}
+    bspc node {-B,-F}
+
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
