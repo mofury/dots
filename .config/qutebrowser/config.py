@@ -48,9 +48,6 @@ c.fonts.prompts = '15pt monospace'
 ## Font used in the statusbar.
 c.fonts.statusbar = '15pt monospace'
 
-## Font used in the tab bar.
-c.fonts.tabs = '15pt monospace'
-
 ## Default font size (in pixels) for regular text.
 c.fonts.web.size.default = 20
 
@@ -108,9 +105,6 @@ c.prompt.filebrowser = True
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers.
 c.qt.force_software_rendering = 'chromium'
-
-## Hide the statusbar unless a message is shown.
-c.statusbar.hide = True
 
 ## Padding (in pixels) for the statusbar.
 c.statusbar.padding = {'top': 5, 'bottom': 5, 'left': 0, 'right': 0}
@@ -184,7 +178,7 @@ c.url.auto_search = 'naive'
 c.url.default_page = '~/.config/tree_page/index.html'
 
 ## Search engines which can be used via the address bar. Maps a search
-c.url.searchengines = {'DEFAULT': 'https://suche.uferwerk.org/?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
+c.url.searchengines = {'DEFAULT': 'https://qwant.com/?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
 
 ## Page(s) to open at the start.
 c.url.start_pages = ['~/.config/tree_page/index.html']

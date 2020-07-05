@@ -13,5 +13,5 @@ case $engine in
     'youtube')      $BROWSER_ALT https://www.youtube.com/results?search_query="$query" & ;;
     'netflix')      $BROWSER_ALT https://www.netflix.com/search?q="$query" & ;;
     'subreddit')    $BROWSER https://reddit.com/r/"$query" & ;;
-    *)              $BROWSER https://suche.uferwerk.org/?q="$engine" & ;;
+    *)              $BROWSER "$engine" & ;;
 esac
