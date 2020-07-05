@@ -2,6 +2,9 @@
 # ~/.zshrc
 #
 
+# detect the user
+source ~/.config/zsh/user.zsh
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 case $USER in
@@ -9,7 +12,7 @@ case $USER in
         PS1="[%{$fg[red]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%{$fg[red]%}%%%{$reset_color%} "
         ;;
     *)
-        PS1="[%{$fg[yellow]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%% "
+        PS1="[%{$fg[green]%}%n%{$reset_color%}:%{$fg[blue]%}%2~%{$reset_color%}]%% "
         ;;
 esac
 
