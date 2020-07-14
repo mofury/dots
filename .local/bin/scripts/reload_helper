@@ -1,11 +1,12 @@
 #!/bin/sh
 
-answer=$(echo "bspwm\ndunst\nbar" | rofi -dmenu -p "Neu laden")
+answer=$(echo "bspwm\npicom\ndunst\nbar" | rofi -dmenu -p "Neu laden")
 
 echo $answer
 
 case $answer in
-    "bspwm")        $XDG_CONFIG_HOME/bspwm/bspwmrc ;;
-    "dunst")        pkill dunst && dunst ;;
-    "bar")          pkill polybar && polybar small ;;
+    "bspwm")	$XDG_CONFIG_HOME/bspwm/bspwmrc ;;
+    "picom")	pkill picom ; picom -b ;;
+    "dunst")	pkill dunst ; dunst ;;
+    "bar")	pkill polybar ; polybar small ;;
 esac
