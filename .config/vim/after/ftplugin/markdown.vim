@@ -1,3 +1,9 @@
+" Linewrapping
+set colorcolumn=
+set linebreak breakindent
+nnoremap j gj
+nnoremap k gk
+
 " Spellchecking
 set spell spelllang=de_20
 

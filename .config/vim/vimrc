@@ -1,5 +1,5 @@
 " xdg
-source $XDG_CONFIG_HOME/vim/xdg.vim
+silent source $XDG_CONFIG_HOME/vim/xdg.vim
 
 " encoding
 set encoding=utf8
@@ -45,11 +45,12 @@ nnoremap <Leader>d :cn<CR>
 nnoremap <Leader>e :cp<CR>
 
 " interface
-set colorcolumn=40,80
+set colorcolumn=80
 set wildmenu
 set showcmd
 set showfulltag
 nnoremap <Leader>n :set number!<CR>
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " status line
 set laststatus=2
