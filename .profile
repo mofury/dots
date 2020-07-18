@@ -2,7 +2,7 @@
 export LANG=de_DE.UTF8
 export EDITOR=vim
 export BROWSER=qutebrowser
-export TERM=st
+export TERM=alacritty
 
 # load german keymap
 loadkeys de

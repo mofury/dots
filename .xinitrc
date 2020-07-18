@@ -7,6 +7,6 @@ xsetroot -cursor_name left_ptr
 ~/.fehbg &
 ~/.config/bspwm/bspwmrc &
 picom -b &
-st -c spotify -t "Spotify Client" -g 120x36 -e zsh &
-st -c dropdown -t "Scratchpad Terminal" -g 120x36 -e zsh &
+$TERMINAL --class spotify,spotify --title "Spotify Client" -d 120 36 -e spt &
+$TERMINAL --class dropdown,dropdown --title "Scratchpad Terminal" -d 120 36 -e zsh &
 exec bspwm
