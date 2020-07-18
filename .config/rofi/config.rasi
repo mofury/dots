@@ -1,5 +1,5 @@
 configuration {
-    theme:  "base16-default-dark";
+    theme:  "tomorrow-night";
     font:   "monospace 20";
     hide-scrollbar: true;
     width: 38;

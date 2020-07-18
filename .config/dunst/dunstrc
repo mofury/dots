@@ -60,19 +60,19 @@ history = ctrl+comma
 context = ctrl+shift+period
 
 [urgency_low]
-background = "#282828"
-foreground = "#a1b56c"
-frame_color = "#a1b56c"
+background = "#282a2e"
+foreground = "#b5bd68"
+frame_color = "#b5bd68"
 timeout = 5
 
 [urgency_normal]
-background = "#282828"
-foreground = "#d8d8d8"
-frame_color = "#d8d8d8"
+background = "#282a2e"
+foreground = "#c5c8c6"
+frame_color = "#c5c8c6"
 timeout = 5
 
 [urgency_critical]
-background = "#282828"
-foreground = "#ab4642"
-frame_color = "#ab4642"
+background = "#282a2e"
+foreground = "#cc6666"
+frame_color = "#cc6666"
 timeout = 10
