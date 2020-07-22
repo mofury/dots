@@ -24,7 +24,7 @@ alias please="sudo"
 alias dots="git --git-dir=$HOME/.dots.git/ --work-tree=$HOME"
 
 # vim alias
-alias v="vim"
+alias v="nvim"
 
 # config files
 alias zrc="vim ~/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc"
