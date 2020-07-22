@@ -5,7 +5,7 @@ export BROWSER=qutebrowser
 export TERM=alacritty
 
 # load german keymap
-loadkeys de
+loadkeys us-acentos
 
 # add ~/bin to $PATH
 export PATH="$HOME/bin:$PATH"

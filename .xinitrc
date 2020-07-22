@@ -1,4 +1,4 @@
-setxkbmap de &
+setxkbmap -layout us -variant altgr-intl &
 sxhkd &
 dunst &
 spotifyd &

@@ -8,7 +8,7 @@
 #      ---
 
 # close the current node
-super + Delete
+super + q
     bspc node -c
 
 # focus the older or newer node in the focus history
@@ -105,15 +105,15 @@ XF86AudioStop
 #   ---
 
 # show help
-super + q
+super + shift + q
     helper
 
 # power menu
-super + Escape
+super + z
     power_menu
 
 # lock the screen
-super + shift + Escape
+super + shift + z
     prompt "Den Bildschirm sperren?" "slock"
 
 # application launcher
@@ -125,15 +125,15 @@ super + shift + space
     rofi -show window
 
 # file browser
-super + shift + BackSpace
+super + shift + f
     rofi -show file-browser
 
 # terminal
-super + BackSpace
+super + f
     $TERMINAL
 
 # scratchpad terminal
-super + f
+super + a
     scratchpad dropdown
 
 # spotify controler
@@ -159,11 +159,3 @@ super + e
 # alternative browser
 super + shift + e
     $BROWSER_ALT
-
-# inkscape
-super + a
-    inkscape
-
-# zathura
-super + y
-    zathura
