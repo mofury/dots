@@ -77,8 +77,10 @@ super + shift + r
 
 # toggle bar
 super + b
-    (pkill polybar && bspc config bottom_padding 0) || \
-    polybar small
+	(pkill lemonbar && bspc config bottom_padding 0) || \
+	(bspc config bottom_padding 50 && bar.sh | lemon.sh)
+    # (pkill polybar && bspc config bottom_padding 0) || \
+    # polybar small
 
 #    ---
 # Media keys
