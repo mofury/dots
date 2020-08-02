@@ -175,13 +175,13 @@ c.tabs.title.alignment = 'center'
 c.url.auto_search = 'naive'
 
 ## Page to open if :open -t/-b/-w is used without URL.
-c.url.default_page = '~/.config/tree_page/index.html'
+c.url.default_page = '~/dokumente/startpage/index.html'
 
 ## Search engines which can be used via the address bar. Maps a search
 c.url.searchengines = {'DEFAULT': 'https://qwant.com/?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&go=Go', 'reddit': 'https://reddit.com/r/{}', 'rust': 'https://doc.rust-lang.org/std/index.html?search={}'}
 
 ## Page(s) to open at the start.
-c.url.start_pages = ['~/.config/tree_page/index.html']
+c.url.start_pages = ['~/dokumente/startpage/index.html']
 
 ## Format to use for the window title.
 c.window.title_format = '{perc}{title_sep}qutebrowser'
