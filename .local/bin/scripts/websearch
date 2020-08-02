@@ -1,17 +1,20 @@
 #!/bin/sh
 
 engine="$(echo 'searx\nwikipedia\narchwiki\nqmkdoc\ngodoc\nrustdoc\nyoutube\nnetflix\nsubreddit' | rofi -dmenu -p 'Suchen in')"
-[ ! -z $engine ] && query="$(rofi -dmenu -p 'Suchen nach')"
+
+Query() {
+	echo "$(rofi -dmenu -p 'Suchen nach')"
+}
 
 case $engine in
-    'searx')        $BROWSER https://suche.uferwerk.org/?q="$query" & ;;
-    'wikipedia')    $BROWSER https://en.wikipedia.org/wiki/"$query" & ;;
-    'archwiki')     $BROWSER https://wiki.archlinux.org/index.php\?search="$query"\&title=Special%3ASearch\&go=Go & ;;
-    'qmkdoc')       $BROWSER https://docs.qmk.fm/\#/"$query" & ;;
-    'godoc')        $BROWSER https://golang.org/search?q="$query" & ;;
-    'rustdoc')      $BROWSER https://doc.rust-lang.org/std/index.html?search="$query" & ;;
-    'youtube')      $BROWSER_ALT https://www.youtube.com/results?search_query="$query" & ;;
-    'netflix')      $BROWSER_ALT https://www.netflix.com/search?q="$query" & ;;
-    'subreddit')    $BROWSER https://reddit.com/r/"$query" & ;;
+    'searx')        $BROWSER https://suche.uferwerk.org/?q="$(Query)" & ;;
+    'wikipedia')    $BROWSER https://en.wikipedia.org/wiki/"$(Query)" & ;;
+    'archwiki')     $BROWSER https://wiki.archlinux.org/index.php\?search="$(Query)"\&title=Special%3ASearch\&go=Go & ;;
+    'qmkdoc')       $BROWSER https://docs.qmk.fm/\#/"$(Query)" & ;;
+    'godoc')        $BROWSER https://golang.org/search?q="$(Query)" & ;;
+    'rustdoc')      $BROWSER https://doc.rust-lang.org/std/index.html?search="$(Query)" & ;;
+    'youtube')      $BROWSER_ALT https://www.youtube.com/results?search_query="$(Query)" & ;;
+    'netflix')      $BROWSER_ALT https://www.netflix.com/search?q="$(Query)" & ;;
+    'subreddit')    $BROWSER https://reddit.com/r/"$(Query)" & ;;
     *)              $BROWSER "$engine" & ;;
 esac
