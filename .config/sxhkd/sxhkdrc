@@ -78,7 +78,7 @@ super + shift + r
 # toggle bar
 super + b
 	(pkill lemonbar && bspc config bottom_padding 0) || \
-	(bspc config bottom_padding 50 && bar.sh | lemon.sh)
+	(bspc config bottom_padding 50 && lemon.sh)
     # (pkill polybar && bspc config bottom_padding 0) || \
     # polybar small
 

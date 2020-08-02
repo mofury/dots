@@ -3,6 +3,7 @@
 Workspaces() {
 	indesks=$(bspc query -D --names)
 	focused=$(bspc query -D --names -d focused)
+	i=1
 
 	for desktop in $indesks; do
 		desktop=$(echo "$desktop")
@@ -10,17 +11,18 @@ Workspaces() {
 
 		if [ ! -z "$nodes" ]; then
 			if [ $desktop = $focused ]; then
-				outdesks=$(echo "$outdesks%{R} [x] %{R}")
+				outdesks=$(echo "$outdesks%{A:bspc desktop -f $desktop:}%{R} [x] %{R}%{A}")
 			else
-				outdesks=$(echo "$outdesks [x] ")
+				outdesks=$(echo "$outdesks%{A:bspc desktop -f $desktop:} [x] %{A}")
 			fi
 		else
 			if [ $desktop = $focused ]; then
-				outdesks=$(echo "$outdesks%{R} [ ] %{R}")
+				outdesks=$(echo "$outdesks%{A:bspc desktop -f $desktop:}%{R} [ ] %{R}%{A}")
 			else
-				outdesks=$(echo "$outdesks [ ] ")
+				outdesks=$(echo "$outdesks%{A:bspc desktop -f $desktop:} [ ] %{A}")
 			fi
 		fi
+		i=$i+1
 	done
 
 	echo $outdesks
@@ -40,6 +42,6 @@ Clock() {
 }
 
 while true; do
-	echo "%{l}%{O14}$(Clock) %{c}$(Workspaces) %{r}$(Network)%{O14}"
+	echo "%{l}%{O14}$(Clock) %{c}%{A4:bspc desktop -f prev.local:}%{A5:bspc desktop -f next.local:}$(Workspaces)%{A}%{A} %{r}$(Network)%{O14}"
 	sleep 1
 done
