@@ -1,16 +1,17 @@
 #!/bin/sh
 
-engine="$(echo 'searx\nwikipedia\narchwiki\nqmkdoc\ngodoc\nrustdoc\nyoutube\nnetflix\nsubreddit' | rofi -dmenu -p 'Suchen in')"
+engine="$(echo 'qwant\nwikipedia\narchwiki\nchess.com\nqmkdoc\ngodoc\nrustdoc\nyoutube\nnetflix\nsubreddit' | rofi -dmenu -p 'Suchen in')"
 
 Query() {
 	echo "$(rofi -dmenu -p 'Suchen nach')"
 }
 
 case $engine in
-    'searx')        $BROWSER https://suche.uferwerk.org/?q="$(Query)" & ;;
+    'qwant')        $BROWSER https://qwant.com/?q="$(Query)" & ;;
     'wikipedia')    $BROWSER https://en.wikipedia.org/wiki/"$(Query)" & ;;
     'archwiki')     $BROWSER https://wiki.archlinux.org/index.php\?search="$(Query)"\&title=Special%3ASearch\&go=Go & ;;
     'qmkdoc')       $BROWSER https://docs.qmk.fm/\#/"$(Query)" & ;;
+    'chess.com')    $BROWSER_ALT https://chess.com/de & ;;
     'godoc')        $BROWSER https://golang.org/search?q="$(Query)" & ;;
     'rustdoc')      $BROWSER https://doc.rust-lang.org/std/index.html?search="$(Query)" & ;;
     'youtube')      $BROWSER_ALT https://www.youtube.com/results?search_query="$(Query)" & ;;
