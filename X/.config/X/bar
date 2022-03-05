@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function getDate {
+	date '+%e. %b %H:%M';
+}
+
+function getBattery {
+	acpi | \
+	cut -d':' -f2 | \
+	cut -d',' -f1,2;
+}
+
+while [ true ]; do
+	xsetroot -name "$(getDate)$(getBattery)"
+	sleep 10
+done

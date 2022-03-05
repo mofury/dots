@@ -1,0 +1,16 @@
+# sxhkd hotkey configuration
+
+super + p
+    rofi -show run
+
+super + space
+    rofi -show combi -combi-modi "window,drun" -modi combi
+
+super + q
+    qutebrowser
+
+super + n
+    kitty
+
+super + shift + x
+    doas poweroff

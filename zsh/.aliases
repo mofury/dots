@@ -1,0 +1,12 @@
+# Shell aliases
+
+# Verbosity
+alias mv="mv -iv"
+alias cp="cp -iv"
+
+# Make parent directories
+alias mkdir="mkdir -p"
+
+# Human readable formatting
+alias ls="ls -h"
+
