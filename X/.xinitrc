@@ -12,8 +12,8 @@ pipewire-pulse &
 pipewire-media-session &
 
 # Set keyboard layout
-setxkbmap -layout us -Option compose:ralt
 doas /home/moritz/.local/bin/kmonad /home/moritz/.macbook.kbd &
+setxkbmap -layout us -option compose:ralt
 
 # Start hotkey daemon
 sxhkd &
