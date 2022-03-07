@@ -1,5 +1,6 @@
 #| -------------- Keeb Pattern ------------------------------
 
+;; --------------- layer ------------------------------------
 (deflayer 
 	_    _    _    _    _    _    _    _    _    _    _    _    _    
 	_    _    _    _    _    _    _    _    _    _    _    _    _    _    
@@ -27,11 +28,22 @@ allow-cmd false
 
 (defsrc
 	esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-	`    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+	grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
 	tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
 	caps a    s    d    f    g    h    j    k    l    ;    '    \    
 	lsft grv  z    x    c    v    b    n    m    ,    .    /    rsft
 	lctl lctl lalt lmet           spc       rmet ralt left down up   rght
+)
+
+;; --------------- aliases ----------------------------------
+
+(defalias
+	fun (layer-toggle function)
+	cut C-x
+	cpy C-c
+	pst C-v
+	all C-a
+	win C-w
 )
 
 ;; --------------- base -------------------------------------
@@ -41,7 +53,18 @@ allow-cmd false
 	z    _    _    _    _    _    _    _    _    _    _    _    _    _    
 	_    q    w    f    p    b    j    l    u    y    ;    [    ]    _
 	esc  a    r    s    t    g    m    n    e    i    o    '    \    
-	_    z    x    c    d    v    \    k    h    ,    .    /    _
-	_    lalt lmet lctl           _         rsft rmet _    _    _    _
+	_    grv  x    c    d    v    \    k    h    ,    .    /    _
+	_    lctl lmet @fun           _         rsft rmet _    _    _    _
+)
+
+;; --------------- function ---------------------------------
+
+(deflayer function 
+	_    _    _    _    _    _    _    _    _    _    _    _    _    
+	_    _    _    _    _    _    _    _    _    _    _    _    _    _    
+	_    _    @win _    _    _    _    _    _    _    _    ü    _    _
+	_    @all _    _    _    _    _    ent  tab  caps ö    ä    _    
+	_    _    @cut @cpy _    @pst _    _    bspc _    _    _    _
+	_    _    _    _              _         _    _    _    _    _    _
 )
 
