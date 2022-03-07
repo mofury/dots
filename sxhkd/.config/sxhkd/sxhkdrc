@@ -6,6 +6,12 @@ super + p
 super + space
     rofi -show combi -combi-modi "window,drun" -modi combi
 
+super + minus
+    amixer set Master 1%-
+
+super + equal
+    amixer set Master 1%+
+
 super + q
     qutebrowser
 
