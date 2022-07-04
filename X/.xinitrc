@@ -5,6 +5,10 @@ ulimit -Sc 0
 
 # Set global dpi
 xrandr --dpi 192
+xrdb -merge $HOME/.Xresources
+
+# Set resolution of external monitor
+[ "$(xrandr | grep 'HDMI-2 connected')" ] && xrandr --output HDMI-2 --primary --mode 3440x1440
 
 # Sound
 pipewire &
