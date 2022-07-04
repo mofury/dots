@@ -39,11 +39,6 @@ allow-cmd false
 
 (defalias
 	fun (layer-toggle function)
-	cut C-x
-	cpy C-c
-	pst C-v
-	all C-a
-	win C-w
 )
 
 ;; --------------- base -------------------------------------
@@ -61,10 +56,10 @@ allow-cmd false
 
 (deflayer function 
 	_    _    _    _    _    _    _    _    _    _    _    _    _    
-	_    _    _    _    _    _    _    _    _    _    _    _    _    _    
-	_    _    @win _    _    _    _    _    _    _    _    ü    _    _
-	_    @all _    _    _    _    _    ent  tab  caps ö    ä    _    
-	_    _    @cut @cpy _    @pst _    _    bspc _    _    _    _
+	_    _    _    _    _    _    _    _    _    _    _    _    _    _
+	_    \(   4    5    6    *    grv  '    ä    ö    ü    _    _    _
+	_    0    1    2    3    [    ]    ret  bspc tab  caps _    _
+	_    \)   7    8    9    &    \    "    \_   -    +    =    _
 	_    _    _    _              _         _    _    _    _    _    _
 )
 
