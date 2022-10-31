@@ -1,5 +1,8 @@
 # sxhkd hotkey configuration
 
+super + e
+    neovide
+
 super + p
     rofi -show run
 
